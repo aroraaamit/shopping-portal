@@ -12,21 +12,21 @@ pipeline{
         stage('build'){
             steps{
                 echo 'this is the compile job'
-                npm install
+                sh 'npm install'
                 
             }
         }
         stage('test'){
             steps{
                 echo 'this is the test job'
-                npm test
+                sh 'npm test'
                 
             }
         }
         stage('package'){
             steps{
                 echo 'this is the package job'
-                npm package
+                sh 'npm package'
                
             }
         }
